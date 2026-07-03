@@ -26,7 +26,7 @@ sudo apt install pandoc        # Debian / Ubuntu
 ---
 
 ## 2. Save The Stylesheet
-
+Do this by just running this in the terminal:
 ```bash
 mkdir -p ~/.config/pandoc
 cat > ~/.config/pandoc/md.css <<'CSS'
@@ -63,6 +63,7 @@ CSS
 ---
 
 ## 3. Add The Function To `~/.zshrc`
+Open with ex. ```nano ~/.zshrc``` and put in the following:
 
 ```zsh
 # Render Markdown to styled, self-contained HTML and open it in the browser.
@@ -103,7 +104,7 @@ md() {
 md-clean() { rm -f ${TMPDIR:-/tmp}/md-preview/*.html 2>/dev/null }
 ```
 
-Reload your shell:
+Reload your shell with:
 
 ```bash
 source ~/.zshrc
